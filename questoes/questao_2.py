@@ -27,8 +27,16 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 2")
-
+    from string import *
+    palavras = input('Digite à frase desejada: ')
+    palavras = palavras.split()
+    multiplos = []
+    for i in palavras:
+        multiplos.append("{}:{}".format(i,palavras.count(i)))
+    multiplos = list(set(multiplos))
+    multiplos = sorted(multiplos)
+    for i in multiplos:
+        print(i)
 
 
 if __name__ == '__main__':
