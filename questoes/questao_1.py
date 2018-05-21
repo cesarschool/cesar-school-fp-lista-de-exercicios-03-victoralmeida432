@@ -28,18 +28,17 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-
-banco_de_dados = []
-senha = str(input('Digite uma senha: '))
-registro = []
-while senha:
-    registro.append(senha)
-    if 6 <= len(senha) <= 12:
-        for i in range(0, len(senha) - 1):
-            if senha[i].isalnum() or senha[i].isupper() or senha[i].islower() or senha[i].isspace():
-                continue
-            if ('@' in senha) or ('#' in senha) or ('$' in senha):
-                banco_de_dados.append(senha)
+    banco_de_dados = []
+    senha = str(input('Digite uma senha: '))
+    registro = []
+    while senha:
+        registro.append(senha)
+        if 6 <= len(senha) <= 12:
+            for i in range(0, len(senha) - 1):
+                if senha[i].isalnum() or senha[i].isupper() or senha[i].islower() or senha[i].isspace():
+                    continue
+                if ('@' in senha) or ('#' in senha) or ('$' in senha):
+                    banco_de_dados.append(senha)
     senha = str(input('Digite uma senha: '))
 print(banco_de_dados)
     
